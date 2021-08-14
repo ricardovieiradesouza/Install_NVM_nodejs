@@ -1,0 +1,43 @@
+
+Como instalar o NVM para Node.js no CentOS 8
+
+
+
+#Estas instruções de instalação são especificamente para um servidor CentOS 8.
+#Estamos usando um servidor Liquid Web VPS executando o servidor Cent OS 8 64-bit Core gerenciado.
+#Estamos logados como usuário Root.
+#Primeiro, precisamos ter certeza de que todos os nossos pacotes estão atualizados:
+
+yum update
+or
+dnf update
+
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+
+source ~/.bash_profile
+
+
+nvm list-remote
+
+
+# Verifique a instalação
+
+#Para revisar qual versão do Node.js está ativa no momento, executaremos o seguinte comando.
+
+nvm current
+
+# Alternar entre versões Node.js usando NVM
+# O NVM permite ao usuário gerenciar várias versões do Node.js. Por exemplo, para instalar a última versão estável do NVM, executaremos o seguinte comando.
+
+nvm install stable
+
+#Agora que existem duas versões do Node.js disponíveis. Para usar a v13, executaremos o seguinte comando para voltar à v13
+
+nvm use v13
+
+
+nvm help
+
+#O NVM facilita a instalação e o gerenciamento de diferentes versões do Node.js. 
+#Agora que o Node.js está instalado, seu ambiente de servidor está preparado e pronto para começar a desenvolver seu aplicativo Node.js.
